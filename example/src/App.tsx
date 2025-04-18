@@ -1,12 +1,18 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-ui-manager-ios';
-
-const result = multiply(3, 7);
+import { Text, View, StyleSheet, findNodeHandle } from 'react-native';
+import { registerView } from 'react-native-ui-manager-ios';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
+    <View
+      ref={(ref) => {
+        const viewTag = findNodeHandle(ref);
+        if (viewTag) {
+          registerView(viewTag);
+        }
+      }}
+      style={styles.container}
+    >
+      <Text>Test</Text>
     </View>
   );
 }
@@ -16,5 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',
   },
 });

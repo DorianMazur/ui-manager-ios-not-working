@@ -1,32 +1,8 @@
 # react-native-ui-manager-ios
 
-Repro
+UIManager is not working on IOS
 
-## Installation
-
-```sh
-npm install react-native-ui-manager-ios
-```
-
-## Usage
-
-
-```js
-import { multiply } from 'react-native-ui-manager-ios';
-
-// ...
-
-const result = multiply(3, 7);
-```
-
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
+<img src="image.png" align="center" />
 
 ---
 

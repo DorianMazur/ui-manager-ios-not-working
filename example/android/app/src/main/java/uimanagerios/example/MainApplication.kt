@@ -1,4 +1,4 @@
-package uimanageriosexample
+package uimanager.ios.example
 
 import android.app.Application
 import com.facebook.react.PackageList

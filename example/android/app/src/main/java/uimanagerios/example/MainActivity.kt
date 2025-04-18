@@ -1,4 +1,4 @@
-package uimanageriosexample
+package uimanager.ios.example
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
