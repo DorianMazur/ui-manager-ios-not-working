@@ -17,16 +17,19 @@ RCT_EXPORT_MODULE()
   return RCTGetUIManagerQueue();
 }
 
-- (void)registerView:(nonnull NSNumber *)target {
+- (void)registerView:(double)target {
+    RCTLogInfo(@"target: %f", target);
+    NSNumber *targetNumber = @(target);
+
     [self.bridge.uiManager addUIBlock:^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, UIView *> *viewRegistry) {
-        UIView *view = viewRegistry[target];
+        UIView *view = viewRegistry[targetNumber];
 
         if (!view) {
-            RCTLogError(@"No view found with reactTag: %@", target);
+            RCTLogError(@"No view found with reactTag: %@", targetNumber);
             return;
         }
 
-        RCTLogInfo(@"Successfully registered view with reactTag: %@", target);
+        RCTLogInfo(@"Successfully registered view with reactTag: %@", targetNumber);
     }];
 }
 
